@@ -1,0 +1,15 @@
+local Player = game.Players.LocalPlayer
+local Character = workspace:WaitForChild(Player.Name)
+local Humanoid = Character:WaitForChild('Humanoid')
+local char = Player.Character
+ 
+while true do wait()
+	if Humanoid.MoveDirection == Vector3.new (0, 0, 0) then
+		Humanoid.WalkSpeed = 14
+	else
+		Humanoid.WalkSpeed = Humanoid.WalkSpeed + .7
+		if Humanoid.WalkSpeed >= 125 then
+			Humanoid.WalkSpeed = 125
+		end
+	end
+end
